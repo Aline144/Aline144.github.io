@@ -1,3 +1,5 @@
+/* Nadia Macedo 77707 */
+
 /*  ============= WEB BROWSER RESETS ============ */
 * { margin: 0; padding: 0; border: none }
 *, *::before, *::after { box-sizing: border-box }
@@ -12,25 +14,6 @@ img { width: 100%; height: auto }
 /* ============ CUSTOM PROPERTIES ============  */
 
 :root {
-
-    /* Alternatives to default sans-serif font */
-    --font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
-
-     /* Alternatives to default serif font */
-    --font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
-
-     /* Alternatives to default monospace font */
-    --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-    /* Fluid font SIZE scale */
-    --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-    --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-    --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-    --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-    --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-    --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-    --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
-
 
     /* Color variables */
     --black-000: #000000;
@@ -117,7 +100,7 @@ img { width: 100%; height: auto }
     --green-050: #F0FDF4;
     --green-100: #f0fff4;
     --green-200: #c6f6d5;
-    --green-300: #9ae6b4;
+    --green-300: #b1efb0;
     --green-400: #14f195;
     --green-500: #48bb78;
     --green-600: #38a169;
@@ -245,6 +228,25 @@ img { width: 100%; height: auto }
     --trend-700: #2c4763;
     --trend-800: #1f364d;
     --trend-900: #0e2439;
+
+
+    /* Alternatives to default sans-serif font */
+    --font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+
+     /* Alternatives to default serif font */
+    --font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+
+     /* Alternatives to default monospace font */
+    --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* Fluid font SIZE scale */
+    --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+    --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+    --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+    --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+    --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+    --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 /*  ============== LAYOUT FOR CONTENT CONTAINERS ================= */
@@ -305,44 +307,213 @@ section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
 
 /* ============= TYPOGRAPHY ============ */
 
-body{
-    background-color: gray
+body { 
+    background-color: var(--blue-200);
+    font-family: var(--font-serif);
 }
 
 h1 {
-    font-size: var(--fs-xxxl);
     margin-top: 32px;
     margin-bottom: 16px;
     line-height: 1.2;
+    color: var(--blue-800);
+    font: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5rem;
+    text-align: center;
+    color: #003344;
+    margin-top: 20px;
 }
 
 h2 {
     font-size: var(--fs-xl);
     line-height: 1.2;
     margin-bottom: 6px;
+    color: var(--blue-800);
 }
 
+section h2 {letter-spacing: -1px;}
 
 p {
 	font-size: var(--fs-base);
     line-height: 1.7;
 	margin-bottom: 12px;
+}
 
+.section-1 {background-color: lemonchiffon;}
+.section-2 {background-color: lightseagreen;}
+.section-3 {background-color: lightblue;}
+.section-4 {background-color: darkblue;}
+
+.section-4 h2,
+.section-4 p {
+    color: white
+}
+
+.section-5 {background-color: lightcoral;}
+.section-6 {background-color: lemonchiffon;}
+
+
+
+
+
+.section-1 {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.section-1 img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #003344;
+    background-color: #115e7e; /* se necessário */
+    margin-bottom: 24px;
+    box-shadow: 8px 10px 8px #888;
+    border-radius: 10%;
 }
 
 
-.section-1{
-    background-color: #06B6D4;
+.section-2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
 
+.section-2 img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #003344;
+    background-color: #115e7e; /* se necessário */
+    margin-bottom: 24px;
+    box-shadow: 8px 10px 8px #545050;
+    border-radius: 10%;
 }
 
 
-.section-2{
-    background-color: var(--green-400);
-    color: white;
+.section-3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.section-3{
-    background-color: var(--amber-400);
-
+.section-3 img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #003344;
+    background-color: #115e7e; /* se necessário */
+    margin-bottom: 24px;
+    box-shadow: 8px 10px 8px #545050;
+    border-radius: 10%;
 }
+
+
+.section-4 {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.section-4 img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #003344;
+    background-color: #115e7e; /* se necessário */
+    margin-bottom: 24px;
+    box-shadow: 8px 10px 8px #545050;
+    border-radius: 10%;
+}
+
+
+.section-5 {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.section-5 img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #003344;
+    background-color: #115e7e; /* se necessário */
+    margin-bottom: 24px;
+    box-shadow: 8px 10px 8px #545050;
+    border-radius: 10%;
+}
+
+
+.section-6 {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.section-6 img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #003344;
+    background-color: #115e7e; /* se necessário */
+    margin-bottom: 24px;
+    box-shadow: 8px 10px 8px #545050;
+    border-radius: 10%;
+}
+
+
+section p {
+    font-family: Arial, Helvetica, sans-serif; /* Fonte legível e neutra */
+    font-size: 1rem;                          /* Tamanho padrão */
+    line-height: 1.6;                         /* Espaçamento entre linhas */
+    color: #111;                              /* Cor de texto neutra */
+    text-align: justify;                      /* Alinha o texto dos dois lados */
+    margin: 0 0 1em 0;                        /* Espaçamento uniforme entre parágrafos */
+    max-width: 800px;                         /* Mantém todos com mesma largura visual */
+}
+
+
+
+
+section h2 {
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #115e7e;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.section-7 {
+    text-align: right;   /* Alinha o texto à direita */
+    padding: 20px;       /* Espaçamento interno opcional */
+}
+
+

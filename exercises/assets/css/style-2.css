@@ -1,3 +1,5 @@
+/* Nadia Macedo 77707 */
+
 /*  ============= WEB BROWSER RESETS ============ */
 * { margin: 0; padding: 0; border: none }
 *, *::before, *::after { box-sizing: border-box }
@@ -94,15 +96,17 @@ section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
 
 /* ============= TYPOGRAPHY ============ */
 
-
-body{
-    background-color: #884EA0;
-}
+body {background-color: #7d3c98;}
 
 h1 {
     font-size: var(--fs-xxxl);
     margin-top: 32px;
     line-height: 1.2;
+    font-family: var(--font-serif);
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: -3px;
+    color: white;
 }
 
 h2 {
@@ -110,12 +114,22 @@ h2 {
     line-height: 1.2;
     margin-top: 48px; 
     margin-bottom: 6px;
+    color: white;
 }
 
 p {
 	font-size: var(--fs-base);
     line-height: 1.7;
 	margin-bottom: 12px;
-    color: --blue-800;
+    font-family: var(--font-sans);
+    color: white;
 }
+
+.backpage {
+  margin-top: 4rem;   /* distância do conteúdo acima */
+  text-align: left; /* opcional — centraliza */
+  font-size: 1rem;
+  color: #540707;        /* ajuste conforme o fundo da sua página */
+}
+
 
