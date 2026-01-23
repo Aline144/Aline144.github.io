@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 80/20 Guide to JavaScript Fundamentals</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --primary-green: #4ade80;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-border: #334155;
+            --code-bg: #000000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 1px solid var(--accent-border);
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            border-left: 4px solid var(--primary-green);
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .intro-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-border);
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            color: var(--primary-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--accent-border);
+            margin: 50px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>The 80/20 Guide to JavaScript Fundamentals</h1>
+            <p class="text-muted">Master the essential 20% that yields 80% of the results.</p>
+        </header>
+
+        <section class="intro-box">
+            <p>Learning to code can feel like an overwhelming task. By applying the <span class="highlight">80/20 principle</span>, we can cut through the noise. This guide focuses exclusively on the high-impact concepts that allow you to start building and understanding code right away.</p>
+        </section>
+
+        <h2>2.0 The Foundation: Adding JS to a Web Page</h2>
+        <p>Before you can write functional code, you must establish a connection between your JavaScript and an HTML document. This is the gateway to bringing your projects to life.</p>
+
+        <h3>2.1 Connecting Your Code</h3>
+        <p>The bridge between HTML and JavaScript is the <code>&lt;script&gt;</code> tag. While you can embed code directly, the professional approach is using an external file with a <code>.js</code> extension. This ensures <strong>separation of concerns</strong> and allows for browser caching, making your site faster.</p>
+
+        <h3>2.2 Ensuring a Smooth User Experience</h3>
+        <p>To prevent "blocking" the visual content, we use the <code>defer</code> attribute. It tells the browser: <em>"Download this now, but wait until the HTML is painted before running it."</em></p>
+
+        <h3>2.3 Your Most Important Tool: The Console</h3>
+        <p>The JavaScript Console is your window into execution. Use <code>console.log()</code> to verify behavior and find errors reported by the browser.</p>
+
+        <hr>
+
+        <h2>3.0 Storing Information: Variables</h2>
+        <p>Variables give our code memory. Think of a variable as a <strong>labeled container</strong> where you store a value for later use.</p>
+
+        <h3>3.1 Declaring Variables: let vs. const</h3>
+        <ul>
+            <li><strong>let:</strong> Used for information that changes (like a game score).</li>
+            <li><strong>const:</strong> Used for constants that never change (like a birth date).</li>
+        </ul>
+
+        <h3>3.2 The Art of Naming</h3>
+        <p>JavaScript uses <code>camelCase</code> (e.g., <code>userFirstName</code>). Names are case-sensitive and cannot contain spaces.</p>
+
+        <h3>3.3 JavaScript's Flexible Nature</h3>
+        <p>JS is <strong>dynamically-typed</strong>. You don't have to declare what type of data a variable holds; it figures it out automatically based on the value assigned.</p>
+
+        <hr>
+
+        <h2>4.0 Core Data Types: Text and Numbers</h2>
+        
+        <h3>4.1 Manipulating Text (Strings)</h3>
+        <p>Strings are sequences of characters in quotes. Modern JS uses <strong>Template Literals</strong> (backticks) to embed variables easily: <code>`Hi ${name}`</code>.</p>
+        <p>Common string methods include checking <code>.length</code>, changing case, or trimming whitespace. Remember: strings are immutable; methods return a <em>new</em> modified copy.</p>
+
+        <h3>4.2 Performing Calculations</h3>
+        <p>Numbers (without quotes) allow for mathematical calculations. JavaScript follows standard <strong>operator precedence</strong>, but you can use parentheses <code>()</code> to control the order of operations.</p>
+
+        <hr>
+
+        <h2>5.0 Conclusion: Your 80/20 Foundation</h2>
+        <p>We've covered the critical path: connecting scripts, using the console, declaring variables, and manipulating strings and numbers. Mastering these high-impact concepts provides the foundation needed to build 80% of the logic you'll face in professional programming.</p>
+
+        <footer>
+            &copy; 2026 JavaScript Fundamentals Guide
+        </footer>
+    </div>
+
+</body>
+</html>
